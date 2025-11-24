@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     web01.vm.provider "virtualbox" do |vb|
       vb.memory = "800"
     end
-    web01.vm.provision "shell", path: "provision/web01.sh"
+    web01.vm.provision "shell", path: "web01.sh"
   end
 
   # ----------------- APP01 -----------------
@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
     app01.vm.provider "virtualbox" do |vb|
       vb.memory = "4200"
     end
-    app01.vm.provision "shell", path: "provision/app01.sh"
+    app01.vm.provision "shell", path: "app01.sh"
   end
 
   # ----------------- RMQ01 -----------------
@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
     rmq01.vm.provider "virtualbox" do |vb|
       vb.memory = "600"
     end
-    rmq01.vm.provision "shell", path: "provision/rmq01.sh"
+    rmq01.vm.provision "shell", path: "rmq01.sh"
   end
 
   # ----------------- MC01 -----------------
@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     mc01.vm.provider "virtualbox" do |vb|
       vb.memory = "900"
     end
-    mc01.vm.provision "shell", path: "provision/mc01.sh"
+    mc01.vm.provision "shell", path: "mc01.sh"
   end
 
   # ----------------- DB01 -----------------
@@ -55,7 +55,8 @@ Vagrant.configure("2") do |config|
     db01.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
     end
-    db01.vm.provision "shell", path: "provision/db01.sh"
+    db01.vm.provision "shell", path: "db01.sh"
   end
 
 end
+
